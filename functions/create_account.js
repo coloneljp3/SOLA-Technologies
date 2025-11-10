@@ -8,11 +8,10 @@ const serverless = require('serverless-http');
 const router = express.Router();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
-var config = {port:3306,user:"if0_39396345",password:"4tOjlR3DNfnec",database:"if0_39396345_atypickal_marketing",host:"localhost"}
 app.use('/',(req,res)=>{
 var user = req.body.username
 var psw = req.body.psw
-var conn = mysql.createConnection(config)
+var conn = mysql.createConnection(process.env.DATABASE_URL)
 conn.query(`Select COUNT(*) FROM Accounts WHERE username = ? AND pasword = ?`,[user,psw],(err,results,fields) => {
     res.send(err); 
 
