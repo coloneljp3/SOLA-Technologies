@@ -7,7 +7,6 @@ const serverless = require('serverless-http');
 const router = express.Router();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
-var config = {user:"if0_39396345",password:"4tOjlR3DNfnec",host:"sql300.infinityfree.com",database:"if0_39396345_atypickal_marketing"}
 app.use('/',(req,res)=>{
 var user = req.body.username
 var psw = req.body.psw
