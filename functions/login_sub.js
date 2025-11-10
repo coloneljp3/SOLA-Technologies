@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use('/',(req,res)=>{
 var user = req.body.username
 var psw = req.body.psw
-var conn = mysql.createConnection(config)
+var conn = mysql.createConnection(process.env.DATABASE_URL)
    conn.query('SELECT * FROM Records',(err,results)=>{res.send(err)})
 
 })
