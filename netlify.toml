@@ -2,7 +2,3 @@
 functions = "/functions"
 command = "npm run"
 
-
-[functions]
-  external_node_modules = ["express"]
-  node_bundler = "esbuild"
