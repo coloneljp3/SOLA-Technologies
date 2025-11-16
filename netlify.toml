@@ -1,4 +1,33 @@
 [build]
 functions = "/functions"
 command = "npm run"
-
+[[redirects]]
+from = "/profile"
+to = "/.netlify/functions/profile"
+[[redirects]]
+from = "/hiring"
+to = "/.netlify/functions/hiring"
+[[redirects]]
+  from = "/home"
+  to = "/.netlify/functions/home"
+  status = 200
+[[redirects]]
+from = "/var/task/functions/login.js"
+to = "/.netlify/functions/login"
+[[redirects]]
+from = "/"
+to = "/home"
+[[redirects]]
+from = "/checkout"
+to = "/.netlify/functions/checkout"
+[[redirects]]
+  from = "/products"
+  to = "/.netlify/functions/products"
+  status = 200
+[[redirects]]
+  from = "/submit"
+  to = "/.netlify/functions/submit"
+[[redirects]]
+  from = "/contact"
+  to = "/.netlify/functions/contact"
+  status = 200
