@@ -16,8 +16,9 @@ function convertDataToGraph(data_points, id){
     
     var parent_of_root = document.getElementById("parent_of_root");
     var pre_existing_graph = document.getElementById('root');
-    parent_of_root.removeChild(pre_existing_graph);
+    pre_existing_graph.remove();
     var root = document.createElement('div');
+    
     let highest_x=data_points[0]["x"];let highest_y=data_points[0]["y"];
     for(let i of data_points){
         if(i["x"]>highest_x){highest_x = i["x"];}
@@ -60,7 +61,7 @@ let line_container = document.createElement('svg');
     
 </script>
 
-<div id = "root_1"><div id = "root"></div></div>
+<div id = "parent_of_root"><div id = "root"></div></div>
 <button onclick = "convertDataToGraph([{'x':34,'y':34},{'x':50,'y':34},{'x':20,'y':45},{'x':17,'y':99},{'x':100,'y':200},{'x':36,'y':67},{'x':69,'y':12}],'root')">Click Me</button>`)})
 app.use('/.netlify/functions/research',router)
 module.exports.handler=serverless(app)
