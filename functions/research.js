@@ -41,7 +41,7 @@ function convertDataToGraph(data_points, id){
         let new_y = highest_y-i["y"];
         point.style.top = new_y;
         let new_x = i["x"];
-        point.style.right = new_x;
+        point.style.left = new_x;
     root.appendChild(point);    
 }}
 
