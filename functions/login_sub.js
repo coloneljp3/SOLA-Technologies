@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use('/',(req,res)=>{
 var user = req.body.username
 var psw = req.body.psw
-var conn = mysql.createConnection(process.env.DATABASE_URL)
+var conn = mysql.createConnection("mysql://avnadmin:AVNS_om8uYVTBL50tPl05R_4@mysql-1e9f0822-jpbreaux225-37e4.h.aivencloud.com:25589/defaultdb?ssl-mode=REQUIRED")
    conn.query('SELECT * FROM Records',(err,results)=>{res.send(err)})
 
 })
