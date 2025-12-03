@@ -12,10 +12,10 @@ var user = req.body.username
 var psw = req.body.psw
 var conn = mysql.createConnection("mysql://avnadmin:AVNS_om8uYVTBL50tPl05R_4@mysql-1e9f0822-jpbreaux225-37e4.h.aivencloud.com:25589/defaultdb?ssl-mode=REQUIRED")
 conn.query(`Create Table Accounts(
-ID int AUTO_INCREMENT NOT NULL,
+PRIMARY KEY ID int AUTO_INCREMENT NOT NULL,
 type_of_acct varchar(40),
 username varchar(40), 
-pasword varchar(40)
+pasword varchar(40),
 );`,[user,psw],(err,results,fields) => {
     res.send(err); 
 
