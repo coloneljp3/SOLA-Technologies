@@ -13,11 +13,10 @@ var psw = req.body.psw
 var conn = mysql.createConnection("mysql://avnadmin:AVNS_om8uYVTBL50tPl05R_4@mysql-1e9f0822-jpbreaux225-37e4.h.aivencloud.com:25589/defaultdb?ssl-mode=REQUIRED")
 conn.query(`
 
-Create Table Analytics(
+Create Table Contributions(
 ID int AUTO_INCREMENT NOT NULL,
-input_data TEXT,
-type_of_data TEXT,
-summary TEXT,
+account_name varchar(40),
+contributions TEXT,
 PRIMARY KEY (id)
 
 
