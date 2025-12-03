@@ -12,12 +12,13 @@ var user = req.body.username
 var psw = req.body.psw
 var conn = mysql.createConnection("mysql://avnadmin:AVNS_om8uYVTBL50tPl05R_4@mysql-1e9f0822-jpbreaux225-37e4.h.aivencloud.com:25589/defaultdb?ssl-mode=REQUIRED")
 conn.query(`
-Create Table UnsupervisedSurveys(
+Create Table SupervisedSurveys(
 ID int AUTO_INCREMENT NOT NULL,
 account_name varchar(40),
-question TEXT,
-answers TEXT,
+JSON_question_answers TEXT,
 PRIMARY KEY (id)
+
+
 );`,[user,psw],(err,results,fields) => {
     res.send(err); 
 
