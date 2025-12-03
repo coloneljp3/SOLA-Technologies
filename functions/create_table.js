@@ -11,12 +11,13 @@ app.use('/',(req,res)=>{
 var user = req.body.username
 var psw = req.body.psw
 var conn = mysql.createConnection("mysql://avnadmin:AVNS_om8uYVTBL50tPl05R_4@mysql-1e9f0822-jpbreaux225-37e4.h.aivencloud.com:25589/defaultdb?ssl-mode=REQUIRED")
-conn.query(`Create Table Accounts(
+conn.query(`
+Create Table UnsupervisedSurveys(
 ID int AUTO_INCREMENT NOT NULL,
-type_of_acct varchar(40),
-username varchar(40), 
-pasword varchar(40),
-PRIMARY KEY (ID)
+account_name varchar(40),
+question TEXT,
+answers TEXT,
+PRIMARY KEY (id)
 );`,[user,psw],(err,results,fields) => {
     res.send(err); 
 
