@@ -27,6 +27,7 @@ weight varchar(10),
 height varchar(10),
 race varchar(40),
 foot_image LONGBLOB NOT NULL, 
+citation varchar(255),
 PRIMARY KEY (id)
 
 
