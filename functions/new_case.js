@@ -32,5 +32,5 @@ conn.query(`INSERT INTO Case_Studies(first_name, last_name, MI, previous_injurie
   
 })
 
-app.use('/.netlify/functions/new-case',router);
+app.use('/.netlify/functions/new_case',router);
 module.exports.hander = serverless(app);
