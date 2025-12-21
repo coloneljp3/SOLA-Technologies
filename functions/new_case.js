@@ -8,7 +8,7 @@ const router = express.Router();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
-app.use('/',(req,res)=>{
+app.post('/',(req,res)=>{
 var first_name = req.body.first_name;
 var last_name = req.body.last_name;
 var MI = req.body["M.I."];
