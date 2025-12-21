@@ -4,6 +4,7 @@
   "homepage": "https://coloneljp3.github.io/CPM",
   "private": true,
   "dependencies": {
+    "@google-cloud/language":"7.2.1",
     "paypal-rest-sdk":"1.8.1",
     "@netlify/planetscale": "^1.0.0",
     "@planetscale/database": "^1.7.0",
