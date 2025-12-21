@@ -26,7 +26,7 @@ var citation = req.body.citation;
 var conn = mysql.createConnection("mysql://avnadmin:AVNS_om8uYVTBL50tPl05R_4@mysql-1e9f0822-jpbreaux225-37e4.h.aivencloud.com:25589/defaultdb?ssl-mode=REQUIRED")
 conn.query(`INSERT INTO Case_Studies(first_name, last_name, MI, previous_injuries_list, sport, diet, weight, height, race, foot_image, citation) VALUES(?,?,?,?,?,?,?,?,?,?,?,?)`,[
   first_name, last_name, MI, prev_injuries_list, sport, diet, height_ft + " "+height_in, race, foot_image, citation],(err,results)=>{
-  res.send(Object.keys(new gcloud.Client()));
+  res.send(gcloud.exports);
   })
   
 })
