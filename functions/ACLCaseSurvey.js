@@ -15,7 +15,7 @@ conn.query(`Select COUNT(*) FROM Accounts WHERE username = ? AND pasword = ?`,[u
     res.send(`<html><head></head><body><style>
 .case-inputs{display:block;border-style:none; border-bottom-style:solid;margin:30px}
   .case-inputs::placeholder{font-family:Verdana;color:grey}  
-</style><h1 style="text-align:center;font-family:Calibri;color:grey">ACL Case Survey</h1><form enctype="multipart/form-data" action="/.netlify/functions/new-case" method="POST" style="margin:auto;width:50%">
+</style><h1 style="text-align:center;font-family:Calibri;color:grey">ACL Case Survey</h1><form enctype="multipart/form-data" action="/.netlify/functions/new_case" method="POST" style="margin:auto;width:50%">
 <input class="case-inputs" name="first_name" placeholder="First Name">
 <input class="case-inputs" name="last_name" placeholder="Last Name">
 <input class="case-inputs" name="M.I." placeholder="Middle Initial">
