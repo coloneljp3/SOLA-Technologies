@@ -5,7 +5,6 @@ const app = express();
 var bodyParser = require('body-parser');
 const serverless = require('serverless-http');
 const router = express.Router();
-const gcloud = require('@google-cloud/language');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
