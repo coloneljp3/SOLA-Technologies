@@ -8,7 +8,7 @@ const router = express.Router();
 const gcloud = require('@google-cloud/language')
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
-app.post('/',(req,res)=>{
+app.use('/',(req,res)=>{
 var first_name = req.body.first_name;
 var last_name = req.body.last_name;
 var MI = req.body["M.I."];
