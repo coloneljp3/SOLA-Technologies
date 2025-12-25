@@ -24,11 +24,11 @@ conn.query(`Select COUNT(*) FROM Accounts WHERE username = ? AND pasword = ?`,[u
 <input class="case-inputs" name="sport" placeholder="Sport/activity">
 <input class="case-inputs" name="diet" placeholder="Diet">
 <input class="case-inputs" name="weight" placeholder="Weight">
-<input class="case-inputs" name="height" placeholder="Height(ft)" style="display:inline-block">
-    <input class="case-inputs" style="display:inline-block" name="height" placeholder="Height(in)">
+<input class="case-inputs" name="height_ft" placeholder="Height(ft)" style="display:inline-block">
+    <input class="case-inputs" style="display:inline-block" name="height_in" placeholder="Height(in)">
 <input class="case-inputs" name="race" placeholder="Race/ethnicity">
 <input class="case-inputs" name="sex" placeholder="Sex">
-<input class="case-inputs" name="foot_image" placeholder="" type="image">
+<input class="case-inputs" name="foot_link" placeholder="Type in the url for the image">
 <input class="case-inputs" name="knee_proportions" placeholder="Knee proportions"><button class="case-inputs" style="margin:auto;text-align:center;height:40px;width:100px;font-size:20px">Submit</button>
 
 
